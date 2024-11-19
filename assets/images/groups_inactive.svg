@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.819" height="24.397" viewBox="0 0 34.819 24.397">
+  <g id="Component_168_2" data-name="Component 168 – 2" transform="translate(1.188)">
+    <g id="Component_167_2" data-name="Component 167 – 2" transform="translate(8.755)">
+      <g id="Ellipse_66" data-name="Ellipse 66" transform="translate(2.005)" fill="none" stroke="#4e4c4c" stroke-width="2">
+        <circle cx="5.5" cy="5.5" r="5.5" stroke="none"/>
+        <circle cx="5.5" cy="5.5" r="4.5" fill="none"/>
+      </g>
+      <path id="Path_228" data-name="Path 228" d="M4976,5748.878s1.736-7.872,7.524-7.872,7.409,7.872,7.409,7.872" transform="translate(-4975.995 -5727)" fill="none" stroke="#505050" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <g id="Ellipse_66-2" data-name="Ellipse 66" transform="translate(22.688 4.559)" fill="none" stroke="#4e4c4c" stroke-width="2">
+      <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+      <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+    </g>
+    <g id="Ellipse_75" data-name="Ellipse 75" transform="translate(0.688 4.559)" fill="none" stroke="#4e4c4c" stroke-width="2">
+      <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+      <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+    </g>
+    <path id="Path_230" data-name="Path 230" d="M4990.928,5741.007c-4.333-.068-5.687,6.2-5.687,6.2" transform="translate(-4985.241 -5724)" fill="none" stroke="#505050" stroke-linecap="round" stroke-width="2"/>
+    <path id="Path_231" data-name="Path 231" d="M4985.241,5741.007c4.333-.068,5.688,6.2,5.688,6.2" transform="translate(-4958.486 -5724)" fill="none" stroke="#505050" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>

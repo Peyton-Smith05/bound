@@ -5,6 +5,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { Text } from '@/components/Themed';
 
 import { useColorScheme } from '@/components/useColorScheme';
 
@@ -24,6 +25,8 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    FigtreeItalic: require('../assets/fonts/Figtree-Italic-VariableFont_wght.ttf'),
+    Figtree: require('../assets/fonts/Figtree-VariableFont_wght.ttf'),
     ...FontAwesome.font,
   });
 
