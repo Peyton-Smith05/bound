@@ -1,8 +1,10 @@
 import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import List from '../../components/List';
+import DynamicListScreen from '@/components/DynamicListScreen';
+import QuoteCard from '@/components/QuoteCard';
+import List from '@/components/List';
+import ReviewCard from '@/components/ReviewCard';
 import { Text } from '@/components/Themed'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -45,32 +47,106 @@ const mockData = [
   },
 ];
 
-// Screens for each top tab
-function PostsScreen() {
-  return <View style={styles.placeholder}><Text>Posts Content</Text></View>;
-}
+const quoteData = [
+  {
+    image: require('@/assets/images/dune.png'),
+    title: 'Dune',
+    author: 'Frank Herbert',
+    quote: 'I must not fear. Fear is the mind-killer. Fear is the little death that brings obliteration. I will face my fear and I will permit it to pass over me and through me.',
+  },
+  {
+    image: require('@/assets/images/dune.png'),
+    title: 'Dune',
+    author: 'Frank Herbert',
+    quote: 'The mystery of life isn’t a problem to solve, but a reality to experience.',
+  },
+  {
+    image: require('@/assets/images/mistborn.png'),
+    title: 'Mistborn: The Final Empire',
+    author: 'Brandon Sanderson',
+    quote: 'You can’t be scared of doing what you think is right, just because someone might not like it.',
+  },
+  {
+    image: require('@/assets/images/mistborn.png'),
+    title: 'Mistborn: The Final Empire',
+    author: 'Brandon Sanderson',
+    quote: 'There’s always another secret.',
+  },
+  {
+    image: require('@/assets/images/wok.png'),
+    title: 'The Way of Kings',
+    author: 'Brandon Sanderson',
+    quote: 'Life before death. Strength before weakness. Journey before destination.',
+  },
+  {
+    image: require('@/assets/images/wok.png'),
+    title: 'The Way of Kings',
+    author: 'Brandon Sanderson',
+    quote: 'Sometimes the prize is not worth the costs. The means by which we achieve victory are as important as the victory itself.',
+  },
+];
+
+const reviewsData = [
+  {
+    image: require('@/assets/images/fifty_shades.png'),
+    title: 'Fifty Shades of Grey',
+    author: 'EL James',
+    rating: 2,
+    ratingType: 'stars',
+    review: 'Methinks the prose lacks the elegance of poetic grace, leaning instead upon wanton fervor.',
+  },
+  {
+    image: require('@/assets/images/mistborn.png'),
+    title: 'Mistborn: The Final Empire',
+    author: 'Brandon Sanderson',
+    rating: 9.8,
+    ratingType: 'numeric',
+    review: 'One of the greatest tales of true heroism. There will never be a book with such an epic ending.',
+  },
+];
+
 
 function ListsScreen() {
   return (
-    <ScrollView
-      style={styles.screenContainer}
-      contentContainerStyle={styles.scrollContent}
-    >
-      {mockData.map((list, index) => (
-        <View key={index} style={styles.listWrapper}>
-          <List title={list.title} books={list.books} />
-        </View>
-      ))}
-    </ScrollView>
+    <DynamicListScreen
+      data={mockData}
+      renderItem={(item) => <List title={item.title} books={item.books} />}
+    />
   );
 }
 
 function QuotesScreen() {
-  return <View style={styles.placeholder}><Text>Quotes Content</Text></View>;
+  return (
+    <DynamicListScreen
+      data={quoteData}
+      renderItem={(item) => (
+        <QuoteCard
+          image={item.image}
+          title={item.title}
+          author={item.author}
+          quote={item.quote}
+        />
+      )}
+    />
+  );
 }
 
 function ReviewsScreen() {
-  return <View style={styles.placeholder}><Text>Reviews Content</Text></View>;
+  return (
+    <DynamicListScreen
+      data={reviewsData}
+      renderItem={(item) => (
+        <ReviewCard
+          image={item.image}
+          title={item.title}
+          author={item.author}
+          rating={item.rating}
+          ratingType={item.ratingType}
+          review={item.review}
+        />
+      )}
+    />
+  );
 }
 
 // Create top tab navigator
