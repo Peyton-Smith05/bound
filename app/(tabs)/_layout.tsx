@@ -8,7 +8,8 @@ export default function RootLayout() {
       <Tabs.Screen 
         name="index"
         options={{
-          title: 'Feed'
+          title: 'Feed',
+          headerShown: false,
           // tabBarIcon: ({ color }) => (
           //   // icon here
           // ),
@@ -17,7 +18,8 @@ export default function RootLayout() {
       <Tabs.Screen 
         name="search"
         options={{
-          title: 'Search'
+          title: 'Search',
+          headerShown: false,
           // tabBarIcon: ({ color }) => (
           //   // icon here
           // ),
@@ -26,7 +28,8 @@ export default function RootLayout() {
       <Tabs.Screen 
         name="library"
         options={{
-          title: 'Library'
+          title: 'Library',
+          headerShown: false,
           // tabBarIcon: ({ color }) => (
           //   // icon here
           // ),
@@ -35,7 +38,8 @@ export default function RootLayout() {
       <Tabs.Screen 
         name="profile/index"
         options={{
-          title: 'Profile'
+          title: 'Profile',
+          headerShown: false,
           // tabBarIcon: ({ color }) => (
           //   // icon here
           // ),

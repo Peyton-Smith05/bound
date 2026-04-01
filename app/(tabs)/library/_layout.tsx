@@ -1,8 +1,6 @@
-import { useFonts } from "expo-font";
-import { Stack }    from "expo-router";
+import { Stack } from "expo-router";
 
 export default function LibraryLayout() {
-
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
@@ -13,3 +11,4 @@ export default function LibraryLayout() {
     </Stack>
   );
 }
+
