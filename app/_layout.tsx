@@ -10,8 +10,11 @@ export default function RootLayout() {
   const [loaded, error] = useFonts({
     'DMSerifText-Regular': require('@/assets/fonts/DMSerifText-Regular.ttf'),
     'DMSerifText-Italic': require('@/assets/fonts/DMSerifText-Italic.ttf'),
-    'Inter-Regular': require('@/assets/fonts/Inter-VariableFont_opsz,wght.ttf'),
-    'Inter-Italic': require('@/assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf'),
+    'Inter-Regular': require('@/assets/fonts/Inter18ptRegular.ttf'),
+    'Inter-Bold': require('@/assets/fonts/Inter18ptBold.ttf'),
+    'Inter-ExtraBold': require('@/assets/fonts/Inter18ptExtraBold.ttf'),
+    'Inter-SemiBold': require('@/assets/fonts/Inter18ptSemiBold.ttf'),
+    'Inter-Medium': require('@/assets/fonts/Inter18ptMedium.ttf'),
   });
 
   useEffect(() => {

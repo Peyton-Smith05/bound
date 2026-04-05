@@ -6,14 +6,18 @@ const FontSizes = {
   md: 14,
   lg: 16,
   xl: 18,
-  xxl: 38,
+  xxl: 32,
+  xxxl: 38,
 } as const;
 
 const FontFamilies = {
   DMSerReg: 'DMSerifText-Regular',
   DMSerIta: 'DMSerifText-Italic',
-  InterReg: 'Inter-Regular',
-  InterIta: 'Inter-Italic',
+  InterRegular: 'Inter-Regular',
+  InterBold: 'Inter-Bold',
+  InterSemiBold: 'Inter-SemiBold',
+  InterExtraBold: 'Inter-ExtraBold',
+  InterMedium: 'Inter-Medium',
 } as const;
 
 const BorderRadius = {
@@ -102,7 +106,7 @@ export const Theme = {
       },
       author: {
         color: BaseColors.midGrey,
-        font: FontFamilies.InterReg,
+        font: FontFamilies.InterSemiBold,
         fontSize: FontSizes.sm,
       },
       cover: {
@@ -129,35 +133,38 @@ export const Theme = {
       },
       subtext: {
         color: BaseColors.midGrey,
-        font: FontFamilies.InterReg,
+        font: FontFamilies.InterSemiBold,
         fontSize: FontSizes.xs,
-      }
+        fontWeight: "600",
+      },
+      backgroudColor: BaseColors.midTan,
+      borderRadius: BorderRadius.lg,
     },
     primaryButton: {
       fill: BaseColors.midGold,
       color: BaseColors.lightTan,
       borderColor: BaseColors.midGold,
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.sm,
     },
     secondaryButton: {
       fill: 'transparent',
       color: BaseColors.midGold,
       borderColor: BaseColors.midGold,
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.sm,
     },
     tertiaryButton: {
       fill: 'transparent',
       color: BaseColors.midGold,
       borderColor: 'transparent',
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.sm,
     },
     tanButton: {
       fill: BaseColors.darkerTan,
       color: BaseColors.midGrey,
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.md,
       borderRadius: BorderRadius.full,
     },
@@ -213,7 +220,7 @@ export const Theme = {
       },
       author: {
         color: BaseColors.midGrey,
-        font: FontFamilies.InterReg,
+        font: FontFamilies.InterRegular,
         fontSize: FontSizes.sm,
       },
       cover: {
@@ -240,35 +247,36 @@ export const Theme = {
       },
       subtext: {
         color: BaseColors.midGrey,
-        font: FontFamilies.InterReg,
+        font: FontFamilies.InterRegular,
         fontSize: FontSizes.xs,
+        fontWeight: "600",
       }
     },
     primaryButton: {
       fill: BaseColors.midGold,
       color: BaseColors.lightTan,
       borderColor: BaseColors.midGold,
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.sm,
     },
     secondaryButton: {
       fill: 'transparent',
       color: BaseColors.midGold,
       borderColor: BaseColors.midGold,
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.sm,
     },
     tertiaryButton: {
       fill: 'transparent',
       color: BaseColors.midGold,
       borderColor: 'transparent',
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.sm,
     },
     tanButton: {
       fill: BaseColors.darkerTan,
       color: BaseColors.midGrey,
-      font: FontFamilies.InterReg,
+      font: FontFamilies.InterRegular,
       fontSize: FontSizes.md,
       borderRadius: BorderRadius.full,
     },

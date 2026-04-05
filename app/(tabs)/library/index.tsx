@@ -4,13 +4,15 @@ import { router } from 'expo-router';
 import { useTheme } from "@/hooks/useTheme";
 import { AppTheme } from "@/constants/theme";
 import LibraryHeader from "@/components/library/LibraryHeader";
+import LibraryStats from "@/components/library/LibraryStats";
 
 export default function Index() {
   const theme = useTheme();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles(theme).safe}>
       <LibraryHeader onSearchPress={() => console.log('search Pressed')} />
+      <LibraryStats />
       <Pressable
         onPress={() => router.push('/library/quotes')}
         style={styles(theme).pressable}
@@ -48,6 +50,9 @@ export default function Index() {
 }
 
 const styles = (theme: AppTheme) => StyleSheet.create({
+  safe: {
+    flex: 1,
+  },
   text: {
     fontFamily: 'DMSerifText-Italic',
     fontSize: 48,
